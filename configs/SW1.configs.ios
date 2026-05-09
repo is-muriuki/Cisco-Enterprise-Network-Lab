@@ -1,0 +1,26 @@
+! --- CREATE THE VLAN DATABASE ---
+vlan 10
+ name SALES_DEPT
+vlan 20
+ name GUEST_WIFI
+vlan 99
+ name NATIVE_MGMT  ! Pro Tip: Use a non-default Native VLAN for security
+
+! --- ASSIGN ACCESS PORTS TO END DEVICES ---
+interface FastEthernet0/1
+ description PC_SALES_01
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast    ! Optimization: Speeds up port connection time
+
+interface FastEthernet0/2
+ description GUEST_AP_01
+ switchport mode access
+ switchport access vlan 20
+
+! --- CONFIGURE THE TRUNK UPLINK TO THE ROUTER ---
+interface FastEthernet0/24
+ description UPLINK_TO_R1
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 10,20,99 ! Security: Only allow specific VLANs
