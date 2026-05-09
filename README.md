@@ -4,7 +4,7 @@
 ## 📌 Project Overview
 This project demonstrates a production-ready branch office network. It focuses on high availability, logical segmentation, and secure remote management using Cisco IOS.
 
-![Network Topology](topology/enterprise-network-topology.png)
+![ Topology](topology/enterprise-network-topology.png)
 
 ## 🛠️ Key Features
 *   **Logical Segmentation:** 3 VLANs (Sales, Guest, Management) implemented via Router-on-a-Stick (802.1Q).
