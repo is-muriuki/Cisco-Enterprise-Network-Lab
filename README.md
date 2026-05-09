@@ -36,7 +36,7 @@ Cisco-Enterprise-Network-Lab/
 
 ## 🖧 Network Topology
 
-![Network Topology](Topology/topology-diagram.png)
+![Network Topology](https://github.com/is-muriuki/Cisco-Enterprise-Network-Lab/commit/b2ad06ed45711f096ccafc4fb590e3ac1612e46d#diff-5dd17f23599fbea4e05058809e538dabf9eca45e142b2893375d734820e6177e)
 
 | Device       | Role              | IP Address       |
 |-------------|-------------------|-----------------|
